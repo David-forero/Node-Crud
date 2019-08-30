@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    background: #070707;
+    padding: 20px 0;
+}
+
+header a{
+    color: #33da00;
+    font-size: 20px;
+    margin: 0px 50px;
+}
+
+/*---------- [ Contenedor ] ----------*/
+
+.contenedor{
+    width: 95%;
+    margin: 20px auto;
+}
+
+.contenedor section{
+    float: left;
+}
+
+.crear-tareas{
+    width: 250px;
+    box-shadow: 0px 0px 3px gray;
+    padding: 15px;
+    text-align: center;
+    background: #f8f6f6;
+}
+
+.crear-tareas div{
+    margin: 10px 0px;
+}
+
+.crear-tareas div input, .crear-tareas div textarea{
+    width: 100%;
+    height: 40px;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: sans-serif;
+}
+
+.crear-tareas input[type="text"]{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.crear-tareas input[type="submit"]{
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #008fe2;
+}.crear-tareas input[type="submit"]:active{
+    background: #00a0fd;
+}
+
+.crear-tareas div textarea{
+    height: 80px; 
+}
+
+/*---------- [ Tabla ] ----------*/
+
+table{
+    text-align: center;
+    background: #f8f6f6;
+    float: right;
+    padding: 20px 30px;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+}
+
+table tr th, table tr td{
+    background: #f8f6f6;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+table a{
+    margin-left: 10px;
+    display: block;
+    float: left;
+    border-radius: 3px;
+    padding: 10px 15px;
+    color: #fff;
+    background: red;
+}
+
+table a:nth-child(2){
+    background: green;
+}
+
+.false{
+    background: grey;
+}.true{background: #0084ff;}
+
+.container-edit{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    background: #000;
+}
+
+.editar{
+    width: 50%;
+    padding: 10px;
+    background: #fff;
+}
+
+.editar input[type="text"]{
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+}
+
+.editar textarea{
+    width: 80%;
+    overflow: unset;
+}

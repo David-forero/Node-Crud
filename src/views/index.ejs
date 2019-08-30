@@ -1,0 +1,48 @@
+    <% include partials/header %>
+
+    <div class="contenedor">
+        
+        <section>
+            <form action="/agregar" method="post" autocomplete="off">
+                <div class="crear-tareas">
+                    <div>
+                        <input type="text" name="titulo" placeholder="Titulo de la tarea">
+                    </div>
+                    
+                    <div>
+                        <textarea name="descripcion" rows="2" placeholder="Escribe una tarea"></textarea>
+                    </div>
+            
+                    <input type="submit" value="Agregar">
+                </div>
+            </form>
+
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Nr.</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < lista.length; i++) {%>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= lista[i].titulo %></td>
+                        <td><%= lista[i].descripcion %></td>
+                        <td>
+                            <a href="/estado/<%= lista[i]._id %>" class="<%= lista[i].status ? 'true' : 'false'%>">Hecho</a>
+                            <a href="/editar/<%= lista[i]._id %>">Editar</a>
+                            <a href="/borrar/<%= lista[i]._id %>">Eliminar</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <% include partials/footer %>
